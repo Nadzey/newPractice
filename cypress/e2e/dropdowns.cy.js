@@ -22,8 +22,8 @@ describe('handle dropdowns', () => {
     it('autosugest dropdown', () => {
     
         cy.visit('https://www.wikipedia.org/')
-        cy.get('#searchInput').type('Grodno')
-        cy.get('.suggestion-title').contains('Hydriastele cariosa').click()
+        cy.get('#searchInput').type('new')
+        cy.get('.suggestion-title').contains('New York Dolls').click()
     
     })
     
