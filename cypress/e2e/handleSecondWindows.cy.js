@@ -11,7 +11,7 @@ describe('Handle tabs', () => {
         cy.go('back')
     })
 
-  //aproach2  invoke method
+  //aproach2  
   it('Handle tab-aproach2', () => {
     cy.visit('https://the-internet.herokuapp.com/windows')
     cy.get('.example a').then((e) => {

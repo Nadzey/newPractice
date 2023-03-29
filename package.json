@@ -9,6 +9,7 @@
   "author": "nadia koluzaeva",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.8.1"
+    "cypress": "^12.8.1",
+    "cypress-iframe": "^1.0.1"
   }
 }
