@@ -23,7 +23,7 @@ describe('handle dropdowns', () => {
     
         cy.visit('https://www.wikipedia.org/')
         cy.get('#searchInput').type('new')
-        cy.get('.suggestion-title').contains('New York Dolls').click()
+        cy.get('.suggestion-title').contains('New York').click()
     
     })
     
