@@ -5,12 +5,12 @@ module.exports = defineConfig({
     viewportHeight: 1080,
     chromeWebSecurity: false,
     defaultCommandTimeout: 7000,
-//     e2e: {
+e2e: {
 //         baseUrl: 'https://openweathermap.org',
-//         setupNodeEvents(on, config) {
+      setupNodeEvents(on, config) {
 //           // implement node event listeners here
-//         },
-//     },
+        },
+   },
 //     env: {
 //         apiBaseUrl: 'https://restful-booker.herokuapp.com'
 //     },
