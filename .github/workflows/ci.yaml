@@ -42,7 +42,7 @@ jobs:
         files: "reports/*.xml"
 
     - name: Artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2.2.4
       if: failure()
       with:
         name: cypress-screenshots
