@@ -1,11 +1,5 @@
 name: CI
 
-
-defaults:
-  run:
-    shell: bash
-    working-directory: ${{ github.workspace }}
-
 on:
   pull_request:
     branches: [main]
