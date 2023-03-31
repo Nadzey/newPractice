@@ -29,7 +29,7 @@ describe('Create Custom commands', () => {
 
         //login
         cy.clickLink('Log in')
-        cy.loginapp('testingtest@gmail.com', 'test123')
+        cy.loginapp('nadiakoluzaeva@gmail.com', 'test123')
 
         cy.get('.ico-account').should('have.text', 'My account')
         //search

@@ -9,11 +9,13 @@ describe('Fixtures & Data Driven Testing (Using JSON Data)', () => {
             cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
             
             data.forEach((userdata) => {
-                cy.get('[placeholder="username"]').type(userdata.name)
+                cy.get('[name="username"]').type(userdata.name)
         
-                cy.get('[placeholder="password"]').type(userdata.password)
+                cy.get('[type="password"]').type(userdata.password)
         
                 cy.get('[type="submit"]').click()
+
+                cy.wait(5000)
 
              
 
