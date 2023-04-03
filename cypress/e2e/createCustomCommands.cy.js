@@ -24,12 +24,39 @@ describe('Create Custom commands', () => {
 
 // })
 
+    it('register', () => {
+    cy.visit('https://demo.nopcommerce.com/')
+
+   
+    cy.get('.ico-register').click()
+    cy.get('#gender-female').check().should('be.checked')
+    cy.get('#FirstName').type('Test')
+    .should('have.value', 'Test')
+    cy.get('#LastName').type('Test')
+    .should('have.value', 'Test')
+    cy.get('[name="DateOfBirthDay"]').select('1')
+    .should('have.value', '1')
+    cy.get('[name="DateOfBirthMonth"]').select('1')
+    .should('have.value', '1')
+    cy.get('[name="DateOfBirthYear"]').select('1982')
+    .should('have.value', '1982')
+    cy.get('#Email').type('testingtest@gmail.com')
+    .should('have.value', 'testingtest@gmail.com')
+    cy.get('#Password').type('test123')
+    cy.get('#ConfirmPassword').type('test123')
+    cy.get('#register-button').click()
+    //cy.get('.button-1.register-continue-button').click()
+
+    //cy.get('.ico-account').should('have.text', 'My account')
+    
+})
+
     it('login command', () => {
         cy.visit('https://demo.nopcommerce.com/')
 
         //login
         cy.clickLink('Log in')
-        cy.loginapp('nadiakoluzaeva@gmail.com', 'test123')
+        cy.loginapp('testingtest@gmail.com', 'test123')
 
         cy.get('.ico-account').should('have.text', 'My account')
         //search
