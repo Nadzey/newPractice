@@ -5,18 +5,18 @@ module.exports = defineConfig({
     viewportHeight: 1080,
     chromeWebSecurity: false,
     defaultCommandTimeout: 7000,
-e2e: {
+
+        reporter: 'cypress-mochawesome-reporter',
+        e2e: {
 //         baseUrl: 'https://openweathermap.org',
-      setupNodeEvents(on, config) {
+            setupNodeEvents(on, config) {
 //           // implement node event listeners here
+                screenshotOnRunFailure=true;
+                require('cypress-mochawesome-reporter/plugin')(on);
         },
    },
+})
 //     env: {
 //         apiBaseUrl: 'https://restful-booker.herokuapp.com'
 //     },
-    video: false,
-    reporter: 'junit',
-    reporterOptions: {
-        mochaFile: 'reports/test-results-[hash].xml',
-    },
-});
+
